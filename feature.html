@@ -1,0 +1,449 @@
+<style>
+:root{
+    --bg: #b7b4b5;
+    --card: rgba(255,255,255,0.82);
+    --text: #222;
+    --muted: #666;
+    --accent: #1f1f1f;
+    --border: rgba(255,255,255,0.35);
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Futura", Arial, sans-serif;
+    background: white;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.header{
+    position: sticky;
+    top:0;
+    z-index:1000;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.82);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.navbar{
+    width: min(1150px, 92%);
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 0px 0;
+}
+
+.logo img{
+    width: 145px;
+    height:auto;
+    display:block;
+}
+
+.nav-links{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    background: rgba(255,255,255,0.8);
+    padding:6px 18px;
+    border-radius:999px;
+    font-size:15px;
+    font-family: arial;
+    transition:0.25s ease;
+    border:1px solid rgba(0,0,0,0.05);
+}
+
+.nav-links a:hover{
+    background:#222;
+    color:white;
+    transform: translateY(-2px);
+}
+
+
+
+.container{
+    width:min(860px, 92%);
+    margin:auto;
+    padding: 55px 0 80px;
+}
+
+
+
+.hero{
+    margin-bottom:60px;
+}
+
+.hero h1{
+    font-size: clamp(52px, 10vw, 100px);
+    line-height:0.9;
+    font-size: clamp(42px, 8vw, 82px);
+    margin-bottom:20px;
+    letter-spacing:-3px;
+}
+
+.hero p{
+    max-width:700px;
+    color: var(--muted);
+    font-size:18px;
+}
+
+.hero-image{
+    margin-top:35px;
+    overflow:hidden;
+    border-radius:26px;
+    box-shadow: var(--shadow);
+}
+
+.hero-image img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+
+
+.article{
+    display:flex;
+    flex-direction:column;
+    gap:70px;
+}
+
+.section{
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    border:1px solid var(--border);
+    border-radius:28px;
+    padding:42px;
+    box-shadow: var(--shadow);
+}
+
+.section h2{
+    font-size:34px;
+    margin-bottom:22px;
+    letter-spacing:-1px;
+}
+
+.section p{
+    margin-bottom:20px;
+    color:#3a3a3a;
+    font-size:17px;
+}
+
+.section a{
+    color:#111;
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.25);
+    transition:0.2s ease;
+}
+
+.section a:hover{
+    opacity:0.65;
+}
+
+
+
+.photo{
+    margin: 28px 0;
+}
+
+.photo img{
+    width:60%;
+    border-radius:22px;
+    display:block;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.caption{
+    margin-top:10px;
+    font-size:14px;
+    color:#666;
+    font-style:italic;
+}
+
+
+.advice-list{
+    margin: 22px 0 8px 18px;
+}
+
+.advice-list li{
+    margin-bottom:10px;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    margin-top: 40px;
+}
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .nav-links{
+        justify-content:center;
+    }
+
+    .section{
+        padding:28px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wheelie Cool</title>
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/mC07Nhfx/Add-a-hading.png">
+        </a>
+
+        <div class="nav-links">
+            <a href="feature.html">feature</a>
+            <a href="pictorial.html">pictorial</a>
+            <a href="maps.html">map</a>
+            <a href="review.html">reviews</a>
+<a href="page.html">images</a>
+            <a href="about.html">about</a>
+        </div>
+
+    </nav>
+</header>
+
+<div class="container">
+
+    <section class="hero">
+        <h1>YAMAHA<br>DEMO DAY</h1>
+
+        <p>
+            A beginner’s experience attending a motorcycle demo event alone,
+            navigating social anxiety, unfamiliar spaces, and discovering how
+            welcoming motorcycle culture can actually be.
+        </p>
+
+        <div class="hero-image">
+            <img src="https://i.ibb.co/Vcy5kBt2/image.png">
+        </div>
+
+        <div class="caption">
+Flyer for the event from Motorcycle Mall’s website, <a href="https://www.motorcyclemall.com/default.asp?page=xlistevents&CalendarIDs=3849&id=605494">source can be found here</a>
+        </div>
+    </section>
+
+    <div class="article">
+
+        <section class="section">
+
+            <h2>INTRO</h2>
+
+            <p>
+At 9:49 AM on Saturday, May 9th, 2026, I woke up earlier than usual for one reason: to drive an hour in the rain to a <a href="https://www.yamahamotorsports.com/">Yamaha</a> motorcycle <a href="https://www.motorcyclemall.com/default.asp?page=xlistevents&CalendarIDs=3849&id=605494">demo event</a> at <a href = "https://www.motorcyclemall.com/">Motorcycle Mall</a> in Bellville, NJ. The problem was that I could not even ride yet. I still do not have my motorcycle license, meaning I would not actually be participating in the demo rides like everyone else there. Instead, I planned to walk around alone, take pictures, and ask questions as a complete beginner.
+Originally planning to <s>force</s> <em>bring</em> a friend with me to ease the awkwardness, they unfortunately couldn’t make it. 
+
+            </p>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/4LFbf7S/Screenshot-2026-05-09-at-11-37-42-PM.png">
+                <div class="caption">My friend cancelling last minute 😭</div>
+            </div>
+
+            <p>
+                By 12:43 PM, I almost decided not to go. It was raining heavily, and I had completely forgotten the event was nearly an hour away. I took the H bus to Busch campus to get my car, still debating whether the trip would even be worth it. The entire drive felt awkward before it even started. Since I could not ride, I kept wondering whether I should even go to a motorcycle demo event in the first place. I imagined everyone there being experienced riders who would instantly recognize that I was completely new. At the same time, I realized that this fear probably stops many people from trying new hobbies in general. Nobody likes feeling inexperienced in front of people who know more than they do.
+
+            </p>
+            
+
+            <div class="photo">
+                <img src="https://i.ibb.co/LdfLkZ1F/IMG-3707.png">
+                                <div class="caption">My waze directions, warning me that I was gonna drive for a total of two hours just to be there for like ten minutes. </div>
+
+            </div>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/FLJynyCq/IMG-3752.png">
+                                <div class="caption">Rainy windows that show how bad it was outside</div>
+
+            </div>
+
+
+        </section>
+
+        <section class="section">
+
+            <h2>OUTSIDE</h2>
+
+            <p>
+              I arrived at Walgreens at 1:44 PM. Yes, Walgreens. I passed by the event, and the parking lot was so busy with the truck, parked cars, and motorcycles that I decided to just walk over from the neighboring Walgreens instead. The rain somehow made everything feel even more intimidating. There were a lot of people who were talking about the bikes and I felt awkward considering I had a weird goal of asking questions and taking pictures of the bikes.
+Outside near the Yamaha demo truck, there was only one facilitator there and not that many people. After awkwardly walking around for a minute pretending to examine motorcycles, I finally decided to ask a few questions. I explained that I was interested in motorcycles but had not started riding yet. Instead of acting weirded out, the facilitator was very chill and started explaining how beginner riders usually get started.
+Some of the advice they gave included:
+
+            </p>
+
+            <ul class="advice-list">
+                <li>Start with a smaller bike and make sure its used so if you mess it up by being in an accident you don't care as much.</li>
+                <li>Focus on confidence before speed.</li>
+                <li>Take a <a href="https://www.njmrt.org/">MSF</a> (Motorcycle Safety Foundation) course, go to the <a href="https://www.nj.gov/mvc/license/njridesafe/index.html">dmv</a>, and yep its literally that easy to get a license.</li>
+                <li>Every rider starts somewhere.</li>
+            </ul><br><p>
+That conversation completely changed the awkwardness for me. What I expected to feel weird instead felt surprisingly welcoming.
+</p>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/5X5tDT4z/IMG-3756.png">
+            </div>
+                            <div class="caption">Photo of the truck with the bikes</div>
+
+
+            <div class="photo">
+                <img src="https://i.ibb.co/HL827TN6/IMG-3713.png">
+                                <div class="caption">Outside Motorcycle Mall</div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <h2>INSIDE</h2>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/20y684M7/IMG-3720.png">
+                <div class="caption">
+<em>Honda CB300R in Pearl Dusk Yellow, learn more <a href="https://powersports.honda.com/motorcycle/standard/cb300r">here</a><br></em>
+                </div>
+            </div>
+
+            <p>
+After spending time outside, I went into the dealership itself. The building was much larger than I expected, with two floors and rows of motorcycles organized by brand and style. Surprisingly lots of families and people of all ages were there. I definitely still felt awkward walking around without any intention of buying something. Most people seemed deeply involved in conversation. I was taking photos and reading about the bikes on the about signs (as if i had any idea on what the stats meant 💀). 
+
+            </p>
+
+
+            <div class="photo">
+                <img src="https://i.ibb.co/hRPpVvjk/IMG-3717.png">
+                <div class="caption">
+<em>2026 Suzuki GSX-8R in Metallic Triton Blue, learn more <a href="https://suzukicycles.com/street/2026/gsx-8r">here</a><br></em>
+                </div>
+            </div>
+
+            <p>
+One thing I noticed was how different motorcycle brands carry their own reputation and how they show their branding. I recognized <a href="https://suzukicycles.com/">Suzuki</a> because of the <a href="https://suzukicycles.com/sportbike/2025/hayabusa">Hayabusa</a>, one of the most famous high-speed sport bikes. I also stopped at the <a href="https://www.ducati.com/us/en/home">Ducati</a> section, which is an italian brand that has a strong reputation in <a href="https://www.motogp.com/">MotoGP racing</a>. Even though I was surrounded by people who knew what they were talking about, I stopped feeling like my inexperience mattered.
+The brand I like the most is <a href="https://www.kawasaki.com/en-us/">Kawasaki</a>, as it was the brand I recognized most from videos and beginner riding discussions online. Seeing the bikes in person felt completely different from seeing them through a screen. As I continued taking photos and asking small questions, I realized nobody actually cared that I was new. 
+          
+</p>
+
+
+        </section>
+
+        <section class="section">
+
+            <h2>CONCLUSION</h2>
+<p>
+    <div class="photo">
+                <img src="https://i.ibb.co/mCsr1vFB/IMG-3735.png">
+              <div class="caption">
+                2026 Kawasaki Ninja 500 sportbike in the iconic Lime Green color, learn more <a href="https://www.kawasaki.com/en-us/motorcycle/ninja/sport/ninja-500">here.</a>
+            </div>
+
+Before attending the Yamaha demo event, I thought that the hardest part would be understanding the motorcycles. However, the hardest part was overcoming the fear of looking inexperienced. As a beginner, it is easy to assume that communities built around certain hobbies are going to judge you. Walking into the dealership alone while knowing almost nothing about motorcycles made me feel very awkward at first. However, the event showed the opposite experience. Most staff members are willing to answer questions, offer advice, and encourage new people to learn. Confidence usually does not come before entering a new community, it develops afterward through experience and interaction. Even though I still cannot ride yet, attending the event made motorcycles feel way less scary. The next step will be finally taking the MSF course and returning to an event like this with an actual motorcycle license instead of just my phone.
+        </p>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/ccsMd0St/IMG-3737.png">
+            </div>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/939nsGQX/IMG-3745.png">
+            </div>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/6J49q0v8/IMG-3749.png">
+            </div>
+
+            <div class="photo">
+                <img src="https://i.ibb.co/4wXsC0C1/IMG-3753.png">
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+
+
+<footer class="footer">
+<style>
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+</style>
+<div class="social-icons" style="display: flex; gap: 6px; flex-wrap: wrap; justify-content: center;">
+  <a href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #000333; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.animation='bounce 0.6s ease'; " onmouseout="this.style.transform=''; this.style.filter=''; this.style.animation='';">
+    <svg class="niftybutton-twitter" data-donate="true" data-tag="twi" data-name="Twitter" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="36px" height="36px" style="width: 36px; height: 36px; display: block; fill: #000333;"><title>Twitter social icon</title>
+    <path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z" fill="#000333"></path>
+</svg>
+  </a>
+  <a href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #000333; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.animation='bounce 0.6s ease'; " onmouseout="this.style.transform=''; this.style.filter=''; this.style.animation='';">
+    <svg class="niftybutton-instagram" data-donate="true" data-tag="ins" data-name="Instagram" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="36px" height="36px" style="width: 36px; height: 36px; display: block; fill: #000333;"><title>Instagram social icon</title>
+    <path d="M256 109.3c47.8 0 53.4 0.2 72.3 1 17.4 0.8 26.9 3.7 33.2 6.2 8.4 3.2 14.3 7.1 20.6 13.4 6.3 6.3 10.1 12.2 13.4 20.6 2.5 6.3 5.4 15.8 6.2 33.2 0.9 18.9 1 24.5 1 72.3s-0.2 53.4-1 72.3c-0.8 17.4-3.7 26.9-6.2 33.2 -3.2 8.4-7.1 14.3-13.4 20.6 -6.3 6.3-12.2 10.1-20.6 13.4 -6.3 2.5-15.8 5.4-33.2 6.2 -18.9 0.9-24.5 1-72.3 1s-53.4-0.2-72.3-1c-17.4-0.8-26.9-3.7-33.2-6.2 -8.4-3.2-14.3-7.1-20.6-13.4 -6.3-6.3-10.1-12.2-13.4-20.6 -2.5-6.3-5.4-15.8-6.2-33.2 -0.9-18.9-1-24.5-1-72.3s0.2-53.4 1-72.3c0.8-17.4 3.7-26.9 6.2-33.2 3.2-8.4 7.1-14.3 13.4-20.6 6.3-6.3 12.2-10.1 20.6-13.4 6.3-2.5 15.8-5.4 33.2-6.2C202.6 109.5 208.2 109.3 256 109.3M256 77.1c-48.6 0-54.7 0.2-73.8 1.1 -19 0.9-32.1 3.9-43.4 8.3 -11.8 4.6-21.7 10.7-31.7 20.6 -9.9 9.9-16.1 19.9-20.6 31.7 -4.4 11.4-7.4 24.4-8.3 43.4 -0.9 19.1-1.1 25.2-1.1 73.8 0 48.6 0.2 54.7 1.1 73.8 0.9 19 3.9 32.1 8.3 43.4 4.6 11.8 10.7 21.7 20.6 31.7 9.9 9.9 19.9 16.1 31.7 20.6 11.4 4.4 24.4 7.4 43.4 8.3 19.1 0.9 25.2 1.1 73.8 1.1s54.7-0.2 73.8-1.1c19-0.9 32.1-3.9 43.4-8.3 11.8-4.6 21.7-10.7 31.7-20.6 9.9-9.9 16.1-19.9 20.6-31.7 4.4-11.4 7.4-24.4 8.3-43.4 0.9-19.1 1.1-25.2 1.1-73.8s-0.2-54.7-1.1-73.8c-0.9-19-3.9-32.1-8.3-43.4 -4.6-11.8-10.7-21.7-20.6-31.7 -9.9-9.9-19.9-16.1-31.7-20.6 -11.4-4.4-24.4-7.4-43.4-8.3C310.7 77.3 304.6 77.1 256 77.1L256 77.1z" fill="#000333"></path>
+    <path d="M256 164.1c-50.7 0-91.9 41.1-91.9 91.9s41.1 91.9 91.9 91.9 91.9-41.1 91.9-91.9S306.7 164.1 256 164.1zM256 315.6c-32.9 0-59.6-26.7-59.6-59.6s26.7-59.6 59.6-59.6 59.6 26.7 59.6 59.6S288.9 315.6 256 315.6z" fill="#000333"></path>
+    <circle cx="351.5" cy="160.5" r="21.5" fill="#000333"></circle>
+</svg>
+  </a>
+  <a href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #000333; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.animation='bounce 0.6s ease'; " onmouseout="this.style.transform=''; this.style.filter=''; this.style.animation='';">
+    <svg class="niftybutton-youtube" data-donate="true" data-tag="you" data-name="YouTube" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="36px" height="36px" style="width: 36px; height: 36px; display: block; fill: #000333;"><title>YouTube social icon</title>
+    <path d="M422.6 193.6c-5.3-45.3-23.3-51.6-59-54 -50.8-3.5-164.3-3.5-215.1 0 -35.7 2.4-53.7 8.7-59 54 -4 33.6-4 91.1 0 124.8 5.3 45.3 23.3 51.6 59 54 50.9 3.5 164.3 3.5 215.1 0 35.7-2.4 53.7-8.7 59-54C426.6 284.8 426.6 227.3 422.6 193.6zM222.2 303.4v-94.6l90.7 47.3L222.2 303.4z" fill="#000333"></path>
+</svg>
+  </a>
+  <a href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #000333; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.animation='bounce 0.6s ease'; " onmouseout="this.style.transform=''; this.style.filter=''; this.style.animation='';">
+    <svg class="niftybutton-tumblr" data-donate="true" data-tag="tum" data-name="Tumblr" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" width="36px" height="36px" style="width: 36px; height: 36px; display: block; fill: #000333;"><title>Tumblr social icon</title>
+    <path d="M210.8 80.3c-2.3 18.3-6.4 33.4-12.4 45.2 -6 11.9-13.9 22-23.9 30.5 -9.9 8.5-21.8 14.9-35.7 19.5v50.6h38.9v124.5c0 16.2 1.7 28.6 5.1 37.1 3.4 8.5 9.5 16.6 18.3 24.2 8.8 7.6 19.4 13.4 31.9 17.5 12.5 4.1 26.8 6.1 43 6.1 14.3 0 27.6-1.4 39.9-4.3 12.3-2.9 26-7.9 41.2-15v-55.9c-17.8 11.7-35.7 17.5-53.7 17.5 -10.1 0-19.1-2.4-27-7.1 -5.9-3.5-10-8.2-12.2-14 -2.2-5.8-3.3-19.1-3.3-39.7v-91.1H345.5v-55.8h-84.4v-90H210.8z" fill="#000333"></path>
+</svg>
+  </a>
+</div>
+
+<p>&copy; 2026 by Ryn Design. All rights reserved.</p>
+
+You can copy, use, and alter without my permission, without crediting me or my site, and use personally and commercially! :D
+<br><br><img src="https://i.ibb.co/mC07Nhfx/Add-a-hading.png" height="40">
+
+</footer>
+
+</body>
+</html>

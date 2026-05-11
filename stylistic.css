@@ -1,0 +1,252 @@
+
+
+:root{
+    --bg: #b7b4b5;
+    --card: rgba(255,255,255,0.82);
+    --text: #222;
+    --muted: #666;
+    --accent: #1f1f1f;
+    --border: rgba(255,255,255,0.35);
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Futura", Arial, sans-serif;
+    background: white;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+p, h1, h2, li{
+    font-family: "Futura", Arial, sans-serif;
+}
+
+.container{
+    width:min(860px, 92%);
+    margin:auto;
+    padding:55px 0 80px;
+}
+
+.header{
+    position: sticky;
+    top:0;
+    z-index:1000;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.82);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.navbar{
+    width:min(1150px, 92%);
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0;
+}
+
+.logo img{
+    width:145px;
+    height:auto;
+    display:block;
+}
+
+.nav-links{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    background: rgba(255,255,255,0.8);
+    padding:6px 18px;
+    border-radius:999px;
+    font-size:15px;
+    transition:0.25s ease;
+    border:1px solid rgba(0,0,0,0.05);
+}
+
+.nav-links a:hover{
+    background:#222;
+    color:white;
+    transform: translateY(-2px);
+}
+
+.red{
+    background: rgba(255,255,255,0.8);
+}
+
+h1{
+    font-size: clamp(42px, 8vw, 82px);
+    line-height:0.95;
+    margin-bottom:20px;
+    letter-spacing:-3px;
+    text-align:center;
+}
+
+h2{
+    font-size:34px;
+    margin:60px 0 24px;
+    letter-spacing:-1px;
+    border:none;
+    padding:0;
+}
+
+.card{
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    border:1px solid var(--border);
+    border-radius:28px;
+    padding:42px;
+    margin:30px 0;
+    box-shadow: var(--shadow);
+}
+
+.card p{
+    font-size:17px;
+    color:#3a3a3a;
+    margin-bottom:18px;
+}
+
+.card ul{
+    margin-top:18px;
+    margin-left:22px;
+}
+
+.card li{
+    margin-bottom:10px;
+    font-size:16px;
+    color:#3a3a3a;
+}
+
+.card strong{
+    color:#111;
+}
+
+.card img{
+    width:100%;
+    border-radius:22px;
+    display:block;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    margin-bottom:24px;
+}
+
+a{
+    color:#111;
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.25);
+    transition:0.2s ease;
+}
+
+a:hover{
+    opacity:0.65;
+}
+
+.profile{
+    display:flex;
+    gap:20px;
+}
+
+.profile img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.role{
+    color:#111;
+    font-weight:bold;
+}
+
+.worldmap{
+    width:100%;
+    max-width:900px;
+    height:600px;
+    background:url("https://i.ibb.co/LGPLnD0/7-SCA-student-centers-map.jpg") no-repeat;
+    background-size:cover;
+    background-position:center;
+    margin:20px auto;
+    position:relative;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow: var(--shadow);
+}
+
+.worldmap-item{
+    position:absolute;
+    color:#cc0033;
+    font-size:22px;
+}
+
+.worldmap-item span{
+    display:none;
+    background:white;
+    padding:6px 10px;
+    border-radius:12px;
+    font-size:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.worldmap-item:hover span{
+    display:inline;
+}
+
+.pochacco{
+    width:100%;
+    max-height:600px;
+    object-fit:contain;
+    display:block;
+    margin-top:-5px;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#fff;
+    margin-top:40px;
+}
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:18px;
+        padding:14px 0;
+    }
+
+    .nav-links{
+        justify-content:center;
+    }
+
+    .card{
+        padding:28px;
+        border-radius:24px;
+    }
+
+    h1{
+        letter-spacing:-2px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .worldmap{
+        height:420px;
+    }
+
+}
+
